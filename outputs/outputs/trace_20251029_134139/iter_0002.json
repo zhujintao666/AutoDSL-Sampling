@@ -1,0 +1,71 @@
+{
+  "iter": 2,
+  "accepted": false,
+  "acc_ratio": 1.5269401591266141e-09,
+  "proposal_score": 5.5,
+  "current_score": 20.0,
+  "proposal_struct": {
+    "Supplier": [
+      "Inventory",
+      "DebtLevel",
+      "ProductionCost",
+      "SupplyCapacity"
+    ],
+    "Manufacturer": [
+      "RawMaterialStock",
+      "OutstandingDebt",
+      "ManufacturingCost",
+      "ProductionCapacity"
+    ],
+    "Distributor": [
+      "GoodsInTransit",
+      "PayableDebt",
+      "LogisticCost",
+      "DistributionCapacity"
+    ],
+    "Wholesaler": [
+      "WarehouseStock",
+      "CreditOwed",
+      "HandlingCost",
+      "StorageCapacity"
+    ],
+    "Retailer": [
+      "ShelfInventory",
+      "LoanBalance",
+      "OperatingCost",
+      "ServiceCapacity"
+    ]
+  },
+  "current_struct": {
+    "Supplier": [
+      "Inventory",
+      "DebtLevel",
+      "ProductionCost",
+      "SupplyCapacity"
+    ],
+    "Manufacturer": [
+      "RawMaterialStock",
+      "OutstandingDebt",
+      "ManufacturingCost",
+      "ProductionCapacity"
+    ],
+    "Distributor": [
+      "WarehouseStock",
+      "PayableDebt",
+      "DistributionCost",
+      "DistributionCapacity"
+    ],
+    "Wholesaler": [
+      "OnHandInventory",
+      "CreditDebt",
+      "WholesaleCost",
+      "OrderFulfillmentCapacity"
+    ],
+    "Retailer": [
+      "ShelfStock",
+      "OperatingDebt",
+      "RetailCost",
+      "ServiceCapacity"
+    ]
+  }
+}

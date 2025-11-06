@@ -1,0 +1,86 @@
+{
+  "Supplier": {
+    "Self": [
+      "Backlog",
+      "Inventory",
+      "ProductionCost",
+      "SupplyCapacity"
+    ],
+    "Neighbors": [
+      "LoanBalance",
+      "ManufacturingCost",
+      "RawMaterialStock"
+    ],
+    "Relations": [
+      "ArrivingOrders"
+    ]
+  },
+  "Manufacturer": {
+    "Self": [
+      "LoanBalance",
+      "ManufacturingCost",
+      "ProductionCapacity",
+      "RawMaterialStock"
+    ],
+    "Neighbors": [
+      "Backlog",
+      "DistributionInventory",
+      "Inventory",
+      "OutstandingDebt"
+    ],
+    "Relations": [
+      "ArrivingOrders",
+      "DownstreamDemand"
+    ]
+  },
+  "Distributor": {
+    "Self": [
+      "DistributionInventory",
+      "FleetCapacity",
+      "OrderBacklog",
+      "TransportationCost"
+    ],
+    "Neighbors": [
+      "CreditOwed",
+      "ProductionCapacity",
+      "StorageCapacity",
+      "WorkInProgress"
+    ],
+    "Relations": [
+      "DownstreamDemand"
+    ]
+  },
+  "Wholesaler": {
+    "Self": [
+      "HandlingCost",
+      "PendingOrders",
+      "StorageCapacity",
+      "WarehouseStock"
+    ],
+    "Neighbors": [
+      "CustomerBacklog",
+      "FleetCapacity",
+      "OnShelfInventory",
+      "OrderBacklog"
+    ],
+    "Relations": [
+      "ArrivingOrders"
+    ]
+  },
+  "Retailer": {
+    "Self": [
+      "CustomerBacklog",
+      "OnShelfInventory",
+      "PayableDebt",
+      "StoreCapacity"
+    ],
+    "Neighbors": [
+      "CreditOwed",
+      "PendingOrders",
+      "WarehouseStock"
+    ],
+    "Relations": [
+      "DownstreamDemand"
+    ]
+  }
+}

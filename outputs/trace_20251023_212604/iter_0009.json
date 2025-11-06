@@ -1,0 +1,86 @@
+{
+  "iter": 9,
+  "accepted": false,
+  "acc_ratio": 1.8732320047801787e-15,
+  "proposal_score": 0.7777777777777779,
+  "current_score": 25.0,
+  "proposal_struct": {
+    "Supplier": [
+      "Inventory",
+      "DebtLevel",
+      "ProductionCapacity",
+      "ProcurementCost",
+      "CreditLimit",
+      "SupplyReliability"
+    ],
+    "Manufacturer": [
+      "RawMaterialStock",
+      "OutstandingDebt",
+      "ManufacturingCost",
+      "ProductionCapacity",
+      "WorkforceCapacity",
+      "OverheadCost"
+    ],
+    "Distributor": [
+      "WarehouseInventory",
+      "PayableDebt",
+      "LogisticCost",
+      "DistributionCapacity",
+      "FleetSize",
+      "HandlingCost"
+    ],
+    "Wholesaler": [
+      "Inventory",
+      "TradeDebt",
+      "OrderingCost",
+      "StorageCapacity",
+      "ReplenishmentRate",
+      "MarkupCost"
+    ],
+    "Retailer": [
+      "ShelfInventory",
+      "OperatingDebt",
+      "RetailPriceCost",
+      "SalesCapacity",
+      "CustomerDemandRate",
+      "DisplaySpace"
+    ]
+  },
+  "current_struct": {
+    "Supplier": [
+      "RawMaterialInventory",
+      "ProductionCapacity",
+      "ProcurementCost",
+      "OutstandingDebt",
+      "SupplyBacklog"
+    ],
+    "Manufacturer": [
+      "WorkInProgressInventory",
+      "ManufacturingCapacity",
+      "ProductionCost",
+      "FinishedGoodsInventory",
+      "LoanBalance"
+    ],
+    "Distributor": [
+      "DistributionCapacity",
+      "TransitInventory",
+      "HandlingCost",
+      "CreditOwed",
+      "OrderBacklog"
+    ],
+    "Wholesaler": [
+      "WarehouseInventory",
+      "StorageCapacity",
+      "WholesaleCost",
+      "AccountsPayable",
+      "UnfilledOrders"
+    ],
+    "Retailer": [
+      "ShelfInventory",
+      "SalesCapacity",
+      "RetailOperatingCost",
+      "InventoryHoldingCost",
+      "CustomerBacklog"
+    ]
+  }
+}

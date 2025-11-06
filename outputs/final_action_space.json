@@ -1,0 +1,128 @@
+{
+  "Supplier": [
+    {
+      "type": "CapacityAllocation",
+      "params": [
+        "Period",
+        "Quantity"
+      ]
+    },
+    {
+      "type": "FulfillOrder",
+      "params": [
+        "To",
+        "Quantity"
+      ]
+    },
+    {
+      "type": "SetPrice",
+      "params": [
+        "Item",
+        "UnitCost"
+      ]
+    }
+  ],
+  "Manufacturer": [
+    {
+      "type": "FulfillOrder",
+      "params": [
+        "To",
+        "Quantity"
+      ]
+    },
+    {
+      "type": "Procure",
+      "params": [
+        "From",
+        "Quantity"
+      ]
+    },
+    {
+      "type": "Produce",
+      "params": [
+        "Quantity"
+      ]
+    },
+    {
+      "type": "SupplierSelection",
+      "params": []
+    }
+  ],
+  "Distributor": [
+    {
+      "type": "AllocateInventory",
+      "params": [
+        "To",
+        "Quantity",
+        "Priority"
+      ]
+    },
+    {
+      "type": "FulfillOrder",
+      "params": [
+        "To",
+        "Quantity"
+      ]
+    },
+    {
+      "type": "OrderPlacement",
+      "params": [
+        "To",
+        "Quantity",
+        "Item"
+      ]
+    },
+    {
+      "type": "SupplierSelection",
+      "params": []
+    }
+  ],
+  "Wholesaler": [
+    {
+      "type": "AllocateInventory",
+      "params": [
+        "To",
+        "Quantity",
+        "Priority"
+      ]
+    },
+    {
+      "type": "FulfillOrder",
+      "params": [
+        "To",
+        "Quantity"
+      ]
+    },
+    {
+      "type": "OrderPlacement",
+      "params": [
+        "To",
+        "Quantity",
+        "Item"
+      ]
+    }
+  ],
+  "Retailer": [
+    {
+      "type": "FulfillOrder",
+      "params": [
+        "To",
+        "Quantity"
+      ]
+    },
+    {
+      "type": "OrderPlacement",
+      "params": [
+        "To",
+        "Quantity",
+        "Item"
+      ]
+    },
+    {
+      "type": "SetServiceLevel",
+      "params": [
+        "Priority"
+      ]
+    }
+  ]
+}
