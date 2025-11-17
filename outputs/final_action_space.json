@@ -1,39 +1,18 @@
 {
   "Supplier": [
     {
-      "type": "CapacityAllocation",
+      "type": "SupplierSelection",
       "params": [
-        "Period",
-        "Quantity"
-      ]
-    },
-    {
-      "type": "FulfillOrder",
-      "params": [
-        "To",
-        "Quantity"
-      ]
-    },
-    {
-      "type": "SetPrice",
-      "params": [
-        "Item",
-        "UnitCost"
+        "AddSupplierId",
+        "RemoveSupplierId"
       ]
     }
   ],
   "Manufacturer": [
     {
-      "type": "FulfillOrder",
+      "type": "OrderPlacement",
       "params": [
         "To",
-        "Quantity"
-      ]
-    },
-    {
-      "type": "Procure",
-      "params": [
-        "From",
         "Quantity"
       ]
     },
@@ -42,86 +21,53 @@
       "params": [
         "Quantity"
       ]
-    },
-    {
-      "type": "SupplierSelection",
-      "params": []
     }
   ],
   "Distributor": [
     {
-      "type": "AllocateInventory",
-      "params": [
-        "To",
-        "Quantity",
-        "Priority"
-      ]
-    },
-    {
-      "type": "FulfillOrder",
-      "params": [
-        "To",
-        "Quantity"
-      ]
-    },
-    {
       "type": "OrderPlacement",
       "params": [
         "To",
-        "Quantity",
-        "Item"
+        "Quantity"
       ]
     },
     {
       "type": "SupplierSelection",
-      "params": []
+      "params": [
+        "AddSupplierId",
+        "RemoveSupplierId"
+      ]
     }
   ],
   "Wholesaler": [
     {
-      "type": "AllocateInventory",
-      "params": [
-        "To",
-        "Quantity",
-        "Priority"
-      ]
-    },
-    {
-      "type": "FulfillOrder",
+      "type": "OrderPlacement",
       "params": [
         "To",
         "Quantity"
       ]
     },
     {
-      "type": "OrderPlacement",
+      "type": "SupplierSelection",
       "params": [
-        "To",
-        "Quantity",
-        "Item"
+        "AddSupplierId",
+        "RemoveSupplierId"
       ]
     }
   ],
   "Retailer": [
     {
-      "type": "FulfillOrder",
+      "type": "OrderPlacement",
       "params": [
         "To",
         "Quantity"
       ]
     },
     {
-      "type": "OrderPlacement",
+      "type": "SupplierSelection",
       "params": [
-        "To",
-        "Quantity",
-        "Item"
-      ]
-    },
-    {
-      "type": "SetServiceLevel",
-      "params": [
-        "Priority"
+        "AddSupplierId",
+        "RemoveSupplierId"
       ]
     }
   ]

@@ -1,0 +1,42 @@
+{
+  "Supplier": {
+    "Inventory": 7,
+    "DebtLevel": 7,
+    "ProductionCost": 7,
+    "ProductionCapacity": 7,
+    "FleetSize": 7,
+    "WholesalePrice": 7
+  },
+  "Manufacturer": {
+    "RawMaterialStock": 7,
+    "OutstandingDebt": 7,
+    "ManufacturingCost": 7,
+    "FactoryCapacity": 7,
+    "MachineryCount": 7,
+    "ProductPrice": 7
+  },
+  "Distributor": {
+    "WarehouseStock": 7,
+    "CreditOwed": 7,
+    "TransportCost": 7,
+    "DeliveryCapacity": 7,
+    "TruckFleet": 7,
+    "DistributionPrice": 7
+  },
+  "Wholesaler": {
+    "StoredGoods": 7,
+    "Payables": 7,
+    "HandlingCost": 7,
+    "StorageCapacity": 7,
+    "WarehouseAssets": 7,
+    "UnitSalePrice": 7
+  },
+  "Retailer": {
+    "OnHandInventory": 7,
+    "ShortTermLiability": 7,
+    "OperatingCost": 7,
+    "StoreCapacity": 7,
+    "CashReserves": 7,
+    "RetailPrice": 7
+  }
+}

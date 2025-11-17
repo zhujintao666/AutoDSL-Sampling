@@ -1,0 +1,91 @@
+{
+  "agents": {
+    "Supplier": {
+      "patch": {
+        "patched": [
+          {
+            "write": "Inventory",
+            "expr": "min(ProductionCapacity, max(0, Inventory + ArrivingOrders - 0))",
+            "reason": "stock-law"
+          }
+        ],
+        "identity_injected": [],
+        "invalid_expr_fixed": []
+      },
+      "relations": [
+        "ArrivingOrders"
+      ],
+      "capacity_picked": "ProductionCapacity"
+    },
+    "Manufacturer": {
+      "patch": {
+        "patched": [
+          {
+            "write": "RawMaterialStock",
+            "expr": "min(FactoryCapacity, max(0, RawMaterialStock + 0 - DownstreamDemand))",
+            "reason": "stock-law"
+          }
+        ],
+        "identity_injected": [],
+        "invalid_expr_fixed": []
+      },
+      "relations": [
+        "DownstreamDemand"
+      ],
+      "capacity_picked": "FactoryCapacity"
+    },
+    "Distributor": {
+      "patch": {
+        "patched": [
+          {
+            "write": "WarehouseStock",
+            "expr": "min(DeliveryCapacity, max(0, WarehouseStock + ArrivingOrders - DownstreamDemand))",
+            "reason": "stock-law"
+          }
+        ],
+        "identity_injected": [],
+        "invalid_expr_fixed": []
+      },
+      "relations": [
+        "ArrivingOrders",
+        "DownstreamDemand"
+      ],
+      "capacity_picked": "DeliveryCapacity"
+    },
+    "Wholesaler": {
+      "patch": {
+        "patched": [
+          {
+            "write": "StoredGoods",
+            "expr": "min(StorageCapacity, max(0, StoredGoods + 0 - DownstreamDemand))",
+            "reason": "stock-law"
+          }
+        ],
+        "identity_injected": [],
+        "invalid_expr_fixed": []
+      },
+      "relations": [
+        "DownstreamDemand"
+      ],
+      "capacity_picked": "StorageCapacity"
+    },
+    "Retailer": {
+      "patch": {
+        "patched": [
+          {
+            "write": "OnHandInventory",
+            "expr": "min(StoreCapacity, max(0, OnHandInventory + ArrivingOrders - 0))",
+            "reason": "stock-law"
+          }
+        ],
+        "identity_injected": [],
+        "invalid_expr_fixed": []
+      },
+      "relations": [
+        "ArrivingOrders"
+      ],
+      "capacity_picked": "StoreCapacity"
+    }
+  },
+  "time": 1762996834
+}

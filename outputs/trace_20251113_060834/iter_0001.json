@@ -1,0 +1,91 @@
+{
+  "iter": 1,
+  "accepted": false,
+  "acc_ratio": 5.056531348335539e-08,
+  "proposal_score": 18.0,
+  "current_score": 30.0,
+  "proposal_struct": {
+    "Supplier": [
+      "Inventory",
+      "DebtLevel",
+      "ProductionCost",
+      "SupplyCapacity",
+      "FleetSize",
+      "ListPrice"
+    ],
+    "Manufacturer": [
+      "RawMaterialStock",
+      "OutstandingDebt",
+      "ManufacturingCost",
+      "ProductionCapacity",
+      "MachineryCount",
+      "ProductPrice"
+    ],
+    "Distributor": [
+      "WarehouseStock",
+      "CreditOwed",
+      "DistributionCost",
+      "DeliveryCapacity",
+      "TransportFleet",
+      "WholesalePrice"
+    ],
+    "Wholesaler": [
+      "OnHandInventory",
+      "Payables",
+      "HandlingCost",
+      "StorageCapacity",
+      "WarehouseCount",
+      "UnitSellingPrice"
+    ],
+    "Retailer": [
+      "ShelfStock",
+      "AccruedLiabilities",
+      "OperatingCost",
+      "StoreCapacity",
+      "PointOfSaleTerminals",
+      "RetailPrice"
+    ]
+  },
+  "current_struct": {
+    "Supplier": [
+      "Inventory",
+      "DebtLevel",
+      "ProductionCost",
+      "ProductionCapacity",
+      "FleetSize",
+      "WholesalePrice"
+    ],
+    "Manufacturer": [
+      "RawMaterialStock",
+      "OutstandingDebt",
+      "ManufacturingCost",
+      "FactoryCapacity",
+      "MachineryCount",
+      "ProductPrice"
+    ],
+    "Distributor": [
+      "WarehouseStock",
+      "CreditOwed",
+      "TransportCost",
+      "DeliveryCapacity",
+      "TruckFleet",
+      "DistributionPrice"
+    ],
+    "Wholesaler": [
+      "StoredGoods",
+      "Payables",
+      "HandlingCost",
+      "StorageCapacity",
+      "WarehouseAssets",
+      "UnitSalePrice"
+    ],
+    "Retailer": [
+      "OnHandInventory",
+      "ShortTermLiability",
+      "OperatingCost",
+      "StoreCapacity",
+      "CashReserves",
+      "RetailPrice"
+    ]
+  }
+}

@@ -1,42 +1,37 @@
 {
   "Supplier": [
-    "DebtLevel",
+    "ProductionCapacity",
+    "WholesalePrice",
     "FleetSize",
     "Inventory",
-    "ProductionCapacity",
-    "ProductionCost",
-    "WholesalePrice"
+    "ProductionCost"
   ],
   "Manufacturer": [
     "FactoryCapacity",
+    "ProductPrice",
     "MachineryCount",
     "ManufacturingCost",
-    "OutstandingDebt",
-    "ProductPrice",
     "RawMaterialStock"
   ],
   "Distributor": [
-    "CreditOwed",
-    "DeliveryCapacity",
     "DistributionPrice",
-    "TransportCost",
     "TruckFleet",
+    "TransportCost",
+    "DeliveryCapacity",
     "WarehouseStock"
   ],
   "Wholesaler": [
-    "HandlingCost",
-    "Payables",
-    "StorageCapacity",
-    "StoredGoods",
     "UnitSalePrice",
-    "WarehouseAssets"
+    "StoredGoods",
+    "WarehouseAssets",
+    "HandlingCost",
+    "StorageCapacity"
   ],
   "Retailer": [
     "CashReserves",
     "OnHandInventory",
+    "StoreCapacity",
     "OperatingCost",
-    "RetailPrice",
-    "ShortTermLiability",
-    "StoreCapacity"
+    "RetailPrice"
   ]
 }

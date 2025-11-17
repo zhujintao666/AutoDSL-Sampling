@@ -1,86 +1,76 @@
 {
   "Supplier": {
     "Self": [
-      "Backlog",
+      "FleetSize",
       "Inventory",
+      "ProductionCapacity",
       "ProductionCost",
-      "SupplyCapacity"
+      "WholesalePrice"
     ],
-    "Neighbors": [
-      "LoanBalance",
-      "ManufacturingCost",
-      "RawMaterialStock"
-    ],
+    "Neighbors": [],
     "Relations": [
       "ArrivingOrders"
     ]
   },
   "Manufacturer": {
     "Self": [
-      "LoanBalance",
+      "FactoryCapacity",
+      "MachineryCount",
       "ManufacturingCost",
-      "ProductionCapacity",
+      "ProductPrice",
       "RawMaterialStock"
     ],
     "Neighbors": [
-      "Backlog",
-      "DistributionInventory",
-      "Inventory",
-      "OutstandingDebt"
+      "DeliveryCapacity"
+    ],
+    "Relations": [
+      "DownstreamDemand"
+    ]
+  },
+  "Distributor": {
+    "Self": [
+      "DeliveryCapacity",
+      "DistributionPrice",
+      "TransportCost",
+      "TruckFleet",
+      "WarehouseStock"
+    ],
+    "Neighbors": [
+      "StorageCapacity"
     ],
     "Relations": [
       "ArrivingOrders",
       "DownstreamDemand"
     ]
   },
-  "Distributor": {
-    "Self": [
-      "DistributionInventory",
-      "FleetCapacity",
-      "OrderBacklog",
-      "TransportationCost"
-    ],
-    "Neighbors": [
-      "CreditOwed",
-      "ProductionCapacity",
-      "StorageCapacity",
-      "WorkInProgress"
-    ],
-    "Relations": [
-      "DownstreamDemand"
-    ]
-  },
   "Wholesaler": {
     "Self": [
       "HandlingCost",
-      "PendingOrders",
       "StorageCapacity",
-      "WarehouseStock"
+      "UnitSalePrice",
+      "WarehouseAssets"
     ],
     "Neighbors": [
-      "CustomerBacklog",
-      "FleetCapacity",
-      "OnShelfInventory",
-      "OrderBacklog"
+      "DeliveryCapacity",
+      "RetailPrice"
     ],
     "Relations": [
-      "ArrivingOrders"
+      "DownstreamDemand"
     ]
   },
   "Retailer": {
     "Self": [
-      "CustomerBacklog",
-      "OnShelfInventory",
-      "PayableDebt",
+      "CashReserves",
+      "OnHandInventory",
+      "OperatingCost",
+      "RetailPrice",
       "StoreCapacity"
     ],
     "Neighbors": [
-      "CreditOwed",
-      "PendingOrders",
-      "WarehouseStock"
+      "StorageCapacity"
     ],
     "Relations": [
-      "DownstreamDemand"
+      "ArrivingOrders"
     ]
   }
 }

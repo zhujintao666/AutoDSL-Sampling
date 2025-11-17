@@ -1,7 +1,11 @@
 {
   "Supplier": [
     {
-      "name": "SupplyCapacity",
+      "name": "ProductionCapacity",
+      "direction": "Max"
+    },
+    {
+      "name": "FleetSize",
       "direction": "Max"
     },
     {
@@ -9,11 +13,11 @@
       "direction": "Max"
     },
     {
-      "name": "ProductionCost",
+      "name": "WholesalePrice",
       "direction": "Min"
     },
     {
-      "name": "Backlog",
+      "name": "ProductionCost",
       "direction": "Min"
     },
     {
@@ -23,7 +27,11 @@
   ],
   "Manufacturer": [
     {
-      "name": "ProductionCapacity",
+      "name": "FactoryCapacity",
+      "direction": "Max"
+    },
+    {
+      "name": "MachineryCount",
       "direction": "Max"
     },
     {
@@ -31,7 +39,7 @@
       "direction": "Max"
     },
     {
-      "name": "WorkInProgress",
+      "name": "ProductPrice",
       "direction": "Max"
     },
     {
@@ -39,29 +47,33 @@
       "direction": "Min"
     },
     {
-      "name": "LoanBalance",
+      "name": "OutstandingDebt",
       "direction": "Min"
     }
   ],
   "Distributor": [
     {
-      "name": "FleetCapacity",
+      "name": "DeliveryCapacity",
       "direction": "Max"
     },
     {
-      "name": "DistributionInventory",
+      "name": "TruckFleet",
       "direction": "Max"
     },
     {
-      "name": "OrderBacklog",
+      "name": "WarehouseStock",
+      "direction": "Max"
+    },
+    {
+      "name": "DistributionPrice",
+      "direction": "Max"
+    },
+    {
+      "name": "TransportCost",
       "direction": "Min"
     },
     {
-      "name": "TransportationCost",
-      "direction": "Min"
-    },
-    {
-      "name": "OutstandingDebt",
+      "name": "CreditOwed",
       "direction": "Min"
     }
   ],
@@ -71,19 +83,23 @@
       "direction": "Max"
     },
     {
-      "name": "WarehouseStock",
+      "name": "StoredGoods",
       "direction": "Max"
     },
     {
-      "name": "PendingOrders",
-      "direction": "Min"
+      "name": "WarehouseAssets",
+      "direction": "Max"
+    },
+    {
+      "name": "UnitSalePrice",
+      "direction": "Max"
     },
     {
       "name": "HandlingCost",
       "direction": "Min"
     },
     {
-      "name": "CreditOwed",
+      "name": "Payables",
       "direction": "Min"
     }
   ],
@@ -93,19 +109,23 @@
       "direction": "Max"
     },
     {
-      "name": "OnShelfInventory",
+      "name": "OnHandInventory",
       "direction": "Max"
     },
     {
-      "name": "CustomerBacklog",
+      "name": "CashReserves",
+      "direction": "Max"
+    },
+    {
+      "name": "RetailPrice",
+      "direction": "Max"
+    },
+    {
+      "name": "OperatingCost",
       "direction": "Min"
     },
     {
-      "name": "RetailOperatingCost",
-      "direction": "Min"
-    },
-    {
-      "name": "PayableDebt",
+      "name": "ShortTermLiability",
       "direction": "Min"
     }
   ]

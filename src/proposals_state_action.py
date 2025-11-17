@@ -122,13 +122,17 @@ def _try_parse_json(text: str, *, kind: str) -> Any:
 
 def load_final_properties() -> Dict[str, List[str]]:
     """
-    Authoritative vocabulary for Self properties per agent (final_structure.json).
-    Expected schema: { "Agent": ["PropA","PropB", ...], ... }
+    Authoritative vocabulary for Self properties per agent.
+    Prefer pruned structure if available.
     """
     here = os.path.dirname(__file__)
-    path = os.path.join(here, "..", "outputs", "final_structure.json")
+    outdir = os.path.join(here, "..", "outputs")
+    pruned = os.path.join(outdir, "final_structure.pruned.json")
+    raw    = os.path.join(outdir, "final_structure.json")
+    path = pruned if os.path.isfile(pruned) else raw
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
+
 
 def _dedup_keep_order(xs: List[str]) -> List[str]:
     seen, out = set(), []

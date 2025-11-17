@@ -1,0 +1,62 @@
+{
+  "Supplier": {
+    "public": [
+      "ListPrice",
+      "SupplyCapacity"
+    ],
+    "private": [
+      "DebtLevel",
+      "FleetSize",
+      "Inventory",
+      "ProductionCost"
+    ]
+  },
+  "Manufacturer": {
+    "public": [
+      "ProductionCapacity",
+      "UnitPrice"
+    ],
+    "private": [
+      "MachineryCount",
+      "ManufacturingCost",
+      "OutstandingDebt",
+      "RawMaterialStock"
+    ]
+  },
+  "Distributor": {
+    "public": [
+      "DeliveryCapacity",
+      "WholesalePrice"
+    ],
+    "private": [
+      "CreditOwed",
+      "DistributionCost",
+      "VehicleFleet",
+      "WarehouseStock"
+    ]
+  },
+  "Wholesaler": {
+    "public": [
+      "SellingPrice",
+      "StorageCapacity"
+    ],
+    "private": [
+      "HandlingCost",
+      "OnHandInventory",
+      "Payables",
+      "WarehouseCount"
+    ]
+  },
+  "Retailer": {
+    "public": [
+      "RetailPrice",
+      "SalesCapacity"
+    ],
+    "private": [
+      "OperatingCost",
+      "ShelfStock",
+      "ShortTermDebt",
+      "StoreCount"
+    ]
+  }
+}

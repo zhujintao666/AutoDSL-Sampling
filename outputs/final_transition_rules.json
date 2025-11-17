@@ -1,0 +1,122 @@
+{
+  "Supplier": {
+    "rules": [
+      {
+        "write": "ProductionCapacity",
+        "expr": "ProductionCapacity"
+      },
+      {
+        "write": "WholesalePrice",
+        "expr": "WholesalePrice"
+      },
+      {
+        "write": "FleetSize",
+        "expr": "FleetSize"
+      },
+      {
+        "write": "Inventory",
+        "expr": "min(ProductionCapacity, max(0, Inventory + ArrivingOrders - 0))"
+      },
+      {
+        "write": "ProductionCost",
+        "expr": "ProductionCost"
+      }
+    ]
+  },
+  "Manufacturer": {
+    "rules": [
+      {
+        "write": "FactoryCapacity",
+        "expr": "FactoryCapacity"
+      },
+      {
+        "write": "ProductPrice",
+        "expr": "ProductPrice"
+      },
+      {
+        "write": "MachineryCount",
+        "expr": "MachineryCount"
+      },
+      {
+        "write": "ManufacturingCost",
+        "expr": "ManufacturingCost"
+      },
+      {
+        "write": "RawMaterialStock",
+        "expr": "min(FactoryCapacity, max(0, RawMaterialStock + 0 - DownstreamDemand))"
+      }
+    ]
+  },
+  "Distributor": {
+    "rules": [
+      {
+        "write": "DistributionPrice",
+        "expr": "DistributionPrice"
+      },
+      {
+        "write": "TruckFleet",
+        "expr": "TruckFleet"
+      },
+      {
+        "write": "TransportCost",
+        "expr": "TransportCost"
+      },
+      {
+        "write": "DeliveryCapacity",
+        "expr": "DeliveryCapacity"
+      },
+      {
+        "write": "WarehouseStock",
+        "expr": "min(DeliveryCapacity, max(0, WarehouseStock + ArrivingOrders - DownstreamDemand))"
+      }
+    ]
+  },
+  "Wholesaler": {
+    "rules": [
+      {
+        "write": "UnitSalePrice",
+        "expr": "UnitSalePrice"
+      },
+      {
+        "write": "StoredGoods",
+        "expr": "min(StorageCapacity, max(0, StoredGoods + 0 - DownstreamDemand))"
+      },
+      {
+        "write": "WarehouseAssets",
+        "expr": "WarehouseAssets"
+      },
+      {
+        "write": "HandlingCost",
+        "expr": "HandlingCost"
+      },
+      {
+        "write": "StorageCapacity",
+        "expr": "StorageCapacity"
+      }
+    ]
+  },
+  "Retailer": {
+    "rules": [
+      {
+        "write": "CashReserves",
+        "expr": "CashReserves + (RetailPrice * min(DownstreamDemand, OnHandInventory)) - OperatingCost"
+      },
+      {
+        "write": "OnHandInventory",
+        "expr": "min(StoreCapacity, max(0, OnHandInventory + ArrivingOrders - 0))"
+      },
+      {
+        "write": "StoreCapacity",
+        "expr": "StoreCapacity"
+      },
+      {
+        "write": "OperatingCost",
+        "expr": "OperatingCost"
+      },
+      {
+        "write": "RetailPrice",
+        "expr": "RetailPrice"
+      }
+    ]
+  }
+}
