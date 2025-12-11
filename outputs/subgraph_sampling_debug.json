@@ -1,0 +1,156 @@
+{
+  "triples": [
+    [
+      "Supplier",
+      "Manufacturer",
+      "Distributor"
+    ],
+    [
+      "Manufacturer",
+      "Distributor",
+      "Wholesaler"
+    ],
+    [
+      "Distributor",
+      "Wholesaler",
+      "Retailer"
+    ]
+  ],
+  "runs": [
+    {
+      "triple": [
+        "Supplier",
+        "Manufacturer",
+        "Distributor"
+      ],
+      "mcmc": [
+        {
+          "iter": 0,
+          "score": 53.099999999999994,
+          "accepted": true
+        },
+        {
+          "iter": 1,
+          "score": 53.099999999999994,
+          "accepted": true,
+          "acc_ratio": 1.0
+        },
+        {
+          "iter": 2,
+          "score": 53.099999999999994,
+          "accepted": true,
+          "acc_ratio": 1.0
+        },
+        {
+          "iter": 3,
+          "score": 53.099999999999994,
+          "accepted": true,
+          "acc_ratio": 1.0
+        },
+        {
+          "iter": 4,
+          "score": 52.8,
+          "accepted": false,
+          "acc_ratio": 0.74081822068172
+        },
+        {
+          "iter": 5,
+          "score": 53.099999999999994,
+          "accepted": true,
+          "acc_ratio": 1.0
+        }
+      ],
+      "best_score": 53.099999999999994
+    },
+    {
+      "triple": [
+        "Manufacturer",
+        "Distributor",
+        "Wholesaler"
+      ],
+      "mcmc": [
+        {
+          "iter": 0,
+          "score": 54.99999999999999,
+          "accepted": true
+        },
+        {
+          "iter": 1,
+          "score": 54.99999999999999,
+          "accepted": true,
+          "acc_ratio": 1.0
+        },
+        {
+          "iter": 2,
+          "score": 54.99999999999999,
+          "accepted": true,
+          "acc_ratio": 1.0
+        },
+        {
+          "iter": 3,
+          "score": 54.99999999999999,
+          "accepted": true,
+          "acc_ratio": 1.0
+        },
+        {
+          "iter": 4,
+          "score": 54.99999999999999,
+          "accepted": true,
+          "acc_ratio": 1.0
+        },
+        {
+          "iter": 5,
+          "score": 54.99999999999999,
+          "accepted": true,
+          "acc_ratio": 1.0
+        }
+      ],
+      "best_score": 54.99999999999999
+    },
+    {
+      "triple": [
+        "Distributor",
+        "Wholesaler",
+        "Retailer"
+      ],
+      "mcmc": [
+        {
+          "iter": 0,
+          "score": 55.79999999999999,
+          "accepted": true
+        },
+        {
+          "iter": 1,
+          "score": 55.699999999999996,
+          "accepted": true,
+          "acc_ratio": 0.9048374180359647
+        },
+        {
+          "iter": 2,
+          "score": 56.29999999999999,
+          "accepted": true,
+          "acc_ratio": 1.0
+        },
+        {
+          "iter": 3,
+          "score": 55.79999999999999,
+          "accepted": true,
+          "acc_ratio": 0.6065306597126334
+        },
+        {
+          "iter": 4,
+          "score": 55.099999999999994,
+          "accepted": true,
+          "acc_ratio": 0.49658530379141164
+        },
+        {
+          "iter": 5,
+          "score": 56.09999999999999,
+          "accepted": true,
+          "acc_ratio": 1.0
+        }
+      ],
+      "best_score": 56.29999999999999
+    }
+  ]
+}

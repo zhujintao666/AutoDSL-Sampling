@@ -3,7 +3,7 @@
     "rules": [
       {
         "write": "ProductionCapacity",
-        "expr": "min(ProductionCapacity, max(0, ProductionCapacity + ArrivingOrders - 0))"
+        "expr": "ProductionCapacity"
       },
       {
         "write": "WholesalePrice",
@@ -11,7 +11,7 @@
       },
       {
         "write": "FleetSize",
-        "expr": "min(ProductionCapacity, max(0, FleetSize + ArrivingOrders - 0))"
+        "expr": "FleetSize"
       },
       {
         "write": "Inventory",
@@ -27,7 +27,7 @@
     "rules": [
       {
         "write": "FactoryCapacity",
-        "expr": "min(FactoryCapacity, max(0, FactoryCapacity + 0 - DownstreamDemand))"
+        "expr": "FactoryCapacity"
       },
       {
         "write": "ProductPrice",
@@ -35,7 +35,7 @@
       },
       {
         "write": "MachineryCount",
-        "expr": "min(FactoryCapacity, max(0, MachineryCount + 0 - DownstreamDemand))"
+        "expr": "MachineryCount"
       },
       {
         "write": "ManufacturingCost",
@@ -55,7 +55,7 @@
       },
       {
         "write": "TruckFleet",
-        "expr": "min(DeliveryCapacity, max(0, TruckFleet + ArrivingOrders - DownstreamDemand))"
+        "expr": "TruckFleet"
       },
       {
         "write": "TransportCost",
@@ -63,7 +63,7 @@
       },
       {
         "write": "DeliveryCapacity",
-        "expr": "min(DeliveryCapacity, max(0, DeliveryCapacity + ArrivingOrders - DownstreamDemand))"
+        "expr": "min(DeliveryCapacity, max(0, DeliveryCapacity))"
       },
       {
         "write": "WarehouseStock",
@@ -91,7 +91,7 @@
       },
       {
         "write": "StorageCapacity",
-        "expr": "min(StorageCapacity, max(0, StorageCapacity + 0 - DownstreamDemand))"
+        "expr": "StorageCapacity"
       }
     ]
   },
@@ -107,7 +107,7 @@
       },
       {
         "write": "StoreCapacity",
-        "expr": "min(StoreCapacity, max(0, StoreCapacity + ArrivingOrders - 0))"
+        "expr": "StoreCapacity"
       },
       {
         "write": "OperatingCost",

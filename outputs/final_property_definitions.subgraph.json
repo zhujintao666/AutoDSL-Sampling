@@ -1,0 +1,211 @@
+{
+  "Supplier": {
+    "properties": {
+      "ProductionCapacity": {
+        "category": "Capacity",
+        "type": "MonetaryValue",
+        "definition": "Maximum number of units this supplier can produce in a single time period, representing the upper limit of production output per period."
+      },
+      "WholesalePrice": {
+        "category": "Price",
+        "type": "MonetaryValue",
+        "definition": "Price per unit at which the supplier sells goods to the downstream manufacturer, set externally and held constant over time."
+      },
+      "FleetSize": {
+        "category": "Asset",
+        "type": "MonetaryValue",
+        "definition": "Number of delivery vehicles owned by the supplier, determining logistical capability for fulfilling outgoing shipments."
+      },
+      "Inventory": {
+        "category": "Stock",
+        "type": "MonetaryValue",
+        "definition": "Current number of finished units physically available in the supplier's inventory, ready for shipment to the manufacturer."
+      },
+      "ProductionCost": {
+        "category": "Cost",
+        "type": "MonetaryValue",
+        "definition": "Cost incurred by the supplier to produce one unit of product, assumed to remain constant over time."
+      }
+    },
+    "relations": [
+      {
+        "name": "ArrivingOrders",
+        "from": [
+          "Manufacturer"
+        ],
+        "to": "Supplier",
+        "type": "DiscreteVolume",
+        "definition": "Orders received by the supplier from the manufacturer for raw materials or components, triggering production and shipment activities."
+      }
+    ]
+  },
+  "Manufacturer": {
+    "properties": {
+      "FactoryCapacity": {
+        "category": "Capacity",
+        "type": "MonetaryValue",
+        "definition": "Maximum number of units the manufacturer can produce in a single time period, constrained by physical and operational limits."
+      },
+      "ProductPrice": {
+        "category": "Price",
+        "type": "MonetaryValue",
+        "definition": "Selling price per unit of product charged by the manufacturer to downstream distributors."
+      },
+      "MachineryCount": {
+        "category": "Asset",
+        "type": "MonetaryValue",
+        "definition": "Number of active machinery units owned and operated by the manufacturer for production purposes."
+      },
+      "ManufacturingCost": {
+        "category": "Cost",
+        "type": "MonetaryValue",
+        "definition": "Total cost incurred by the manufacturer to produce one unit of product, including labor and overhead."
+      },
+      "RawMaterialStock": {
+        "category": "Stock",
+        "type": "MonetaryValue",
+        "definition": "Current inventory level of raw materials available for use in the manufacturing process."
+      }
+    },
+    "relations": [
+      {
+        "name": "DownstreamDemand",
+        "from": [
+          "Distributor"
+        ],
+        "to": "Manufacturer",
+        "type": "DiscreteVolume",
+        "definition": "The quantity of goods demanded by the distributor from the manufacturer in the current time period."
+      }
+    ]
+  },
+  "Distributor": {
+    "properties": {
+      "DistributionPrice": {
+        "category": "Price",
+        "type": "MonetaryValue",
+        "definition": "The price per unit that the distributor charges to downstream agents for delivered goods."
+      },
+      "TruckFleet": {
+        "category": "Asset",
+        "type": "MonetaryValue",
+        "definition": "The number of trucks owned and operated by the distributor for product delivery."
+      },
+      "TransportCost": {
+        "category": "Cost",
+        "type": "MonetaryValue",
+        "definition": "The cost per unit to transport goods from the distributor to downstream agents."
+      },
+      "DeliveryCapacity": {
+        "category": "Capacity",
+        "type": "MonetaryValue",
+        "definition": "The maximum number of units the distributor can deliver in a single time period."
+      },
+      "WarehouseStock": {
+        "category": "Stock",
+        "type": "MonetaryValue",
+        "definition": "The current number of units physically stored in the distributor's warehouse available for delivery."
+      }
+    },
+    "relations": [
+      {
+        "name": "ArrivingOrders",
+        "from": [
+          "Manufacturer"
+        ],
+        "to": "Distributor",
+        "type": "DiscreteVolume",
+        "definition": "Orders received by the distributor from its upstream supplier (e.g., manufacturer) that arrive at the warehouse."
+      },
+      {
+        "name": "DownstreamDemand",
+        "from": [
+          "Wholesaler"
+        ],
+        "to": "Distributor",
+        "type": "DiscreteVolume",
+        "definition": "The quantity of goods requested by the wholesaler from the distributor in the current period."
+      }
+    ]
+  },
+  "Wholesaler": {
+    "properties": {
+      "UnitSalePrice": {
+        "category": "Price",
+        "type": "MonetaryValue",
+        "definition": "The price at which the wholesaler sells one unit of goods to the downstream retailer."
+      },
+      "StoredGoods": {
+        "category": "Stock",
+        "type": "MonetaryValue",
+        "definition": "The current number of discrete units physically stored in the wholesaler's warehouse."
+      },
+      "WarehouseAssets": {
+        "category": "Asset",
+        "type": "MonetaryValue",
+        "definition": "The total monetary value of the wholesaler's warehouse infrastructure and fixed assets."
+      },
+      "HandlingCost": {
+        "category": "Cost",
+        "type": "MonetaryValue",
+        "definition": "The cost incurred by the wholesaler per unit handled, including labor and operational expenses."
+      },
+      "StorageCapacity": {
+        "category": "Capacity",
+        "type": "MonetaryValue",
+        "definition": "The maximum number of discrete units that can be stored in the wholesaler's warehouse at any time."
+      }
+    },
+    "relations": [
+      {
+        "name": "DownstreamDemand",
+        "from": [
+          "Retailer"
+        ],
+        "to": "Wholesaler",
+        "type": "DiscreteVolume",
+        "definition": "The quantity of goods requested by the retailer from the wholesaler in the current period."
+      }
+    ]
+  },
+  "Retailer": {
+    "properties": {
+      "CashReserves": {
+        "category": "Asset",
+        "type": "MonetaryValue",
+        "definition": "The amount of money the retailer currently has available to cover costs and purchases."
+      },
+      "OnHandInventory": {
+        "category": "Stock",
+        "type": "MonetaryValue",
+        "definition": "Current number of product units physically available in the retailer's store for sale."
+      },
+      "StoreCapacity": {
+        "category": "Capacity",
+        "type": "MonetaryValue",
+        "definition": "Maximum number of product units the retailer's store can physically hold at any time."
+      },
+      "OperatingCost": {
+        "category": "Cost",
+        "type": "MonetaryValue",
+        "definition": "Fixed monetary cost the retailer incurs each period to remain operational, regardless of sales or inventory."
+      },
+      "RetailPrice": {
+        "category": "Price",
+        "type": "MonetaryValue",
+        "definition": "Selling price per unit charged by the retailer to customers."
+      }
+    },
+    "relations": [
+      {
+        "name": "ArrivingOrders",
+        "from": [
+          "Wholesaler"
+        ],
+        "to": "Retailer",
+        "type": "DiscreteVolume",
+        "definition": "Shipments received by the retailer from the wholesaler that arrive in the current period."
+      }
+    ]
+  }
+}
